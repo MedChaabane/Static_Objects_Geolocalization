@@ -30,3 +30,8 @@ conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
 cd ${OBJECTS_GEOLOCALIZATION}
 pip install -r requirements.txt
 ```
+
+## Extract TLG Data set
+In order to extract TLG dataset:
+* The nuScenes dataset should first downloaded from their [official webpage](https://www.nuscenes.org).
+* Install [YOLO v3](https://github.com/eriklindernoren/PyTorch-YOLOv3) and download the [pretrained model](https://github.com/eriklindernoren/PyTorch-YOLOv3/blob/master/weights/download_weights.sh).
