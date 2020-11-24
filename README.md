@@ -51,3 +51,9 @@ python train_nuscenes.py
 ```
 python test_nuscenes.py
 ```
+## Evaluate Tracking 
+In order to evaluate 2D tracking using [py-motmetrics](https://github.com/cheind/py-motmetrics), we provided post-processing code to change ground truth and predictions is same like [MOT Challenge](https://motchallenge.net) format. Change paths in tracking_post_process.py and run:
+
+```
+python tracking_post_process.py
+```
