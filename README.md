@@ -35,3 +35,8 @@ pip install -r requirements.txt
 In order to extract TLG dataset:
 * The nuScenes dataset should first downloaded from their [official webpage](https://www.nuscenes.org).
 * Install [YOLO v3](https://github.com/eriklindernoren/PyTorch-YOLOv3) and download the [pretrained model](https://github.com/eriklindernoren/PyTorch-YOLOv3/blob/master/weights/download_weights.sh).
+
+Then, you can change the paths in extract_TLG_dataset.py and run:
+```
+python extract_TLG_dataset.py
+```
