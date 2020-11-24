@@ -42,7 +42,12 @@ python extract_TLG_dataset.py
 ```
 ## Train Joint Pose and Matching Model
 
-you can change the paths and hyperparameters in config/config.py and run:
+Change the paths and hyperparameters in config/config.py and run:
 ```
 python train_nuscenes.py
+```
+## Test Tracking and Objects Geo-localization
+
+```
+python test_nuscenes.py
 ```
