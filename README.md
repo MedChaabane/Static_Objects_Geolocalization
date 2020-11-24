@@ -40,3 +40,9 @@ Then, you can change the paths in extract_TLG_dataset.py and run:
 ```
 python extract_TLG_dataset.py
 ```
+## Train Joint Pose and Matching Model
+
+you can change the paths and hyperparameters in config/config.py and run:
+```
+python train_nuscenes.py
+```
