@@ -2,7 +2,7 @@
 
 End-to-end Learning Improves Static Object Geo-localization in Monocular Video:
 > [**End-to-end Learning Improves Static Object Geo-localization in Monocular Video**](https://arxiv.org/abs/2004.05232),  
-> Mohamed Chaabane, Lionel Gueguen, Ameni Trabelsi, Ross Beveridge, and Stephen O'Hara,
+> Mohamed Chaabane, Lionel Gueguen, Ameni Trabelsi, Ross Beveridge, and Stephen OHara,
 > *arXiv technical report ([arXiv 2004.01177](http://arxiv.org/abs/2004.01177))*  
 
 
