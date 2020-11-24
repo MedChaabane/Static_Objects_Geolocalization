@@ -47,7 +47,7 @@ Change the paths and hyperparameters in config/config.py and run:
 python train_nuscenes.py
 ```
 ## Test Tracking and Objects Geo-localization
-
+Download [pretrained model](https://drive.google.com/file/d/1fj60H8sbAstBsiEBYBDWFcqoOsO3tpfY/view?usp=sharing), change path of the model in confog/config.py and run:
 ```
 python test_nuscenes.py
 ```
