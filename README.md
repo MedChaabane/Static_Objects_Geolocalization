@@ -14,3 +14,4 @@ End-to-end Learning Improves Static Object Geo-localization in Monocular Video:
 }
 
 Contact: [chaabane@colostate.edu](mailto:chaabane@colostate.edu). Any questions or discussion are welcome! 
+
