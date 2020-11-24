@@ -1,1 +1,0 @@
-# Static_Objects_Geolocalization
