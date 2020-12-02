@@ -34,7 +34,7 @@ pip install -r requirements.txt  # need to pin versions in this file
 
 ## Extract TLG Data set
 In order to extract TLG dataset:
-* The nuScenes dataset should first downloaded from their [official webpage](https://www.nuscenes.org).
+* The nuScenes dataset ( Full dataset and Map expansion )should first downloaded from their [official webpage](https://www.nuscenes.org).
 * Install [YOLO v3](https://github.com/eriklindernoren/PyTorch-YOLOv3) and download the [pretrained model](https://github.com/eriklindernoren/PyTorch-YOLOv3/blob/master/weights/download_weights.sh).
 ```
 conda activate Objects_Geolocalization
