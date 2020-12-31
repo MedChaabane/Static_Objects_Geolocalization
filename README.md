@@ -67,3 +67,5 @@ In order to evaluate 2D tracking using [py-motmetrics](https://github.com/cheind
 ```
 python tracking_post_process.py
 ```
+## Acknowledgement
+A large portion of code is borrowed from [eriklindernoren/PyTorch-YOLOv3](https://github.com/eriklindernoren/PyTorch-YOLOv3), [shijieS/SST](https://github.com/shijieS/SST) and [j96w/DenseFusion](https://github.com/j96w/DenseFusion), many thanks to their wonderful work!
