@@ -9,7 +9,7 @@ from scipy.optimize import linear_sum_assignment
 from config.config import config
 from layer.matching_network import build_network
 
-
+# A large part of this code is from https://github.com/shijieS/SST , many thanks to their wonderful work. 
 class TrackUtil:
     @staticmethod
     def convert_detection(detection):
