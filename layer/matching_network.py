@@ -144,7 +144,7 @@ def convert_to_ref_frame(Cx, Cy, pred_t, pred_r, cs_record, poserecord, first_re
     pose_global_frame = torch.from_numpy(pose_global_frame).float().cuda()
     return pose_global_frame
 
-
+# Part of this class is from https://github.com/shijieS/SST
 class network(nn.Module):
     def __init__(self, phase, base, extras, selector, final_net, use_gpu=config['cuda'], pose_estimator=None, max_objects=100, batch_size=1):
         super().__init__()
@@ -432,9 +432,9 @@ class network(nn.Module):
 
     def forward_extras(self, x, extras, sources):
         for k, v in enumerate(extras):
-            # x = F.relu(v(x), inplace=True)        #done: relu is unnecessary.
+            
             x = v(x)
-            # done: should select the output of BatchNormalization (-> k%6==2)
+           
             if k % 6 == 3:
                 sources.append(x)
         return x
@@ -457,14 +457,14 @@ class network(nn.Module):
                 label_res.append(
                     # [B, C, 1, 1]
                     F.grid_sample(
-                        sources[source_index],  # [B, C, H, W]
-                        labels[:, label_index, :],  # [B, 1, 1, 2
+                        sources[source_index], 
+                        labels[:, label_index, :],  
                     ).squeeze(2).squeeze(2),
                 )
             res.append(torch.cat(label_res, 1))
 
         return torch.stack(res, 1)
-
+    
     def forward_stacker2(self, stacker1_pre_output, stacker1_next_output):
 
         stacker1_pre_output = stacker1_pre_output.unsqueeze(
@@ -530,7 +530,7 @@ class network(nn.Module):
         else:
             print('Sorry only .pth and .pkl files supported.')
 
-
+# Some part of this function is from https://github.com/shijieS/SST
 def vgg(cfg, i, batch_norm=False):
     layers = []
     in_channels = i
@@ -556,7 +556,7 @@ def vgg(cfg, i, batch_norm=False):
     ]
     return layers
 
-
+# This function is from https://github.com/shijieS/SST
 def add_extras(cfg, i, batch_norm=True):
     layers = []
     in_channels = i
@@ -593,7 +593,7 @@ def add_extras(cfg, i, batch_norm=True):
         in_channels = v
     return layers
 
-
+# This function is from https://github.com/shijieS/SST
 def add_final(cfg, batch_normal=True):
     layers = []
     in_channels = int(cfg[0])
@@ -614,7 +614,7 @@ def add_final(cfg, batch_normal=True):
 
     return layers
 
-
+# This function is from https://github.com/shijieS/SST
 def selector(vgg, extra_layers, batch_normal=True):
     '''
     batch_normal must be same to add_extras batch_normal
@@ -653,7 +653,6 @@ def selector(vgg, extra_layers, batch_normal=True):
             ]
 
     return vgg, extra_layers, selector_layers
-
 
 def build_network(phase, use_gpu=config['cuda'], pose_estimator=None, max_objects=100, batch_size=1):
     '''
