@@ -4,7 +4,7 @@ from torch.nn import functional as F
 
 import layer.extractors as extractors
 
-
+# This class if from https://github.com/j96w/DenseFusion
 class PSPModule(nn.Module):
     def __init__(self, features, out_features=1024, sizes=(1, 2, 3, 6)):
         super().__init__()
@@ -34,7 +34,7 @@ class PSPModule(nn.Module):
         bottle = self.bottleneck(torch.cat(priors, 1))
         return self.relu(bottle)
 
-
+# This class if from https://github.com/j96w/DenseFusion
 class PSPUpsample(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -47,7 +47,7 @@ class PSPUpsample(nn.Module):
     def forward(self, x):
         return self.conv(x)
 
-
+# This class if from https://github.com/j96w/DenseFusion
 class PSPNet(nn.Module):
     def __init__(
         self, n_classes=21, sizes=(1, 2, 3, 6), psp_size=2048, deep_features_size=1024, backend='resnet18',
