@@ -8,7 +8,7 @@ from numpy import random
 import utils.operation as op
 from config.config import config
 
-
+# large part of this code is from https://github.com/shijieS/SST
 def intersect(box_a, box_b):
     max_xy = np.minimum(box_a[:, 2:], box_b[2:])
     min_xy = np.maximum(box_a[:, :2], box_b[:2])
